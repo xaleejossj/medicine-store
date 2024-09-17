@@ -144,7 +144,7 @@ button{
 	justify-content: center;
 	display: block;	
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 10px;
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -155,24 +155,23 @@ button{
 }
 a:visited{
 	
-    color: #ffffff;
+    color: #0c5ae0;
     text-decoration: none;
 }
 a:link{
-    color: rgb(255, 255, 255);
+    color: #0c5ae0(255, 255, 255);	
     text-decoration: none;
 }
 button:hover{
 	background: #003053;
 }
 .login{
-
-
 	height: 460px;
 	background: #0c5ae0	;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
+	align-items: center;
 }
 .login label{
 	align-items: center;

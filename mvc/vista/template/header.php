@@ -5,7 +5,10 @@ session_start();
 
 // Verificar si el usuario está logueado
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: login.php");
+    echo "<script>
+            alert('Debe iniciar sesión para acceder a esta página.');
+            window.location.href = 'login.php';
+          </script>";
     exit();
 }
 
@@ -24,10 +27,14 @@ switch ($user_role) {
         break;
     default:
         // Si el rol no es válido
-        echo "Rol no reconocido";
+        echo "<script>
+                alert('Rol no reconocido.');
+                window.location.href = 'login.php';
+              </script>";
         exit();
 }
 ?>
+
 
 <html lang="es">
 <header> 
