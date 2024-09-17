@@ -1,9 +1,9 @@
 <?php
 
-    $host = "localhost";
-    $user = "root";
-    $clave = "admin";
-    $bd = "medicine_store";
+    $host = "u964289722_medicine_store";
+    $user = "u964289722_root";
+    $clave = "Admin2024@";
+    $bd = "u964289722_medicine_store";
 
     $conexion = mysqli_connect($host,$user,$clave,$bd);
     if (mysqli_connect_errno()){
