@@ -1,9 +1,9 @@
 <?php
 // Archivo de conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "admin";
-$database = "medicine_store";
+$servername = "etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "utfhr8qz53o76ot3";
+$password = "ko7id0fuhf1flqm4";
+$database = "rocz3lolotn7fkkx";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
