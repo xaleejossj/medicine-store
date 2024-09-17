@@ -109,7 +109,7 @@ include("template/header.php");
                 </div>
                 <h4>$<?php echo number_format($row['PRECIO'], 2); ?></h4>
             </div>
-            <button class="i" onclick="agregarC('<?php echo $row['NOMBRE_PRODUCTO']; ?>', <?php echo $row['PRECIO']; ?>, 'img/<?php echo $row['ID_PRODUCTO']; ?>.jpg')">
+            <button class="i" onclick="agregarC('<?php echo $row['ID_PRODUCTO']?>','<?php echo htmlspecialchars($row['NOMBRE_PRODUCTO']); ?>', <?php echo $row['PRECIO']; ?>, '<?php echo $imagen_src; ?>')">
                 <div class="car">
                     <h5>Agregar al carrito <i class='bx bxs-cart-add'></i></h5>
                 </div>
@@ -175,7 +175,7 @@ include("template/header.php");
                 </div>
                 <h4>$<?php echo number_format($row['PRECIO'], 2); ?></h4>
             </div>
-            <button class="i" onclick="agregarC('<?php echo $row['NOMBRE_PRODUCTO']; ?>', <?php echo $row['PRECIO']; ?>, 'img/<?php echo $row['ID_PRODUCTO']; ?>.jpg')">
+            <button class="i" onclick="agregarC('<?php echo $row['ID_PRODUCTO']?>','<?php echo htmlspecialchars($row['NOMBRE_PRODUCTO']); ?>', <?php echo $row['PRECIO']; ?>, '<?php echo $imagen_src; ?>')">
                 <div class="car">
                     <h5>Agregar al carrito <i class='bx bxs-cart-add'></i></h5>
                 </div>
@@ -188,8 +188,30 @@ include("template/header.php");
     </div>
 </section>
 
-<script type="text/javascript">
-    // Functions for adding and managing products in the cart
+<script>
+    function agregarC(id, nombre, precio, imagen) {
+        let cantidad = prompt("Ingrese la cantidad:", 1);
+        cantidad = parseInt(cantidad);
+        
+        if (isNaN(cantidad) || cantidad < 1) {
+            alert("Cantidad no válida.");
+            return;
+        }
+
+        let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+
+        // Verificar si el producto ya está en el carrito
+        let productoExistente = carrito.find(producto => producto.id === id);
+
+        if (productoExistente) {
+            productoExistente.cantidad += cantidad;
+        } else {
+            carrito.push({ id, nombre, precio, imagen, cantidad });
+        }
+
+        sessionStorage.setItem('carrito', JSON.stringify(carrito));
+        alert("Producto agregado al carrito");
+    }
 </script>
 
 </body>

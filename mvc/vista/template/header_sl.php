@@ -8,7 +8,7 @@
         </div> 
         <nav>
                 <ul>
-                    <li id="home"><a href="../../mvc/index.php"><i class='bx bxs-home'></i></a></li>                    
+                    <li id="home"><a href="index.php"><i class='bx bxs-home'></i></a></li>                    
                     <li><a href="#Categorias">Categorias</a></li>                    
                     <li><a href="#producto1">Productos</a></li>
                     <li><a href="#Contactanos">Quienes somos</a></li>
