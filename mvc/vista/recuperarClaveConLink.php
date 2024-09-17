@@ -32,7 +32,7 @@ if ($cantidadConsulta == 0) {
     $queryResult = mysqli_query($conn, $updateClave); 
 
     // Crear enlace de recuperación de contraseña
-    $linkRecuperar = "http://localhost:3000/mvc/vista/nuevaClave.php?id=".$dataConsulta['ID_USUARIO']."&token=".$miTokenClave;
+    $linkRecuperar = "https://medicinestore.store/mvc/vista/nuevaClave.php?id=".$dataConsulta['ID_USUARIO']."&token=".$miTokenClave;
 
     // Crear una instancia de PHPMailer
     $mail = new PHPMailer(true);
