@@ -614,27 +614,114 @@ button:hover {
 }
 
 /* Responsividad: Ajustes de tabla en pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  th,
-  td {
-    font-size: 14px;
-    text-align: left; /* Alineación a la izquierda en pantallas pequeñas */
+/* Responsive para pantallas grandes */
+/* Responsive para pantallas grandes */
+@media (max-width: 1200px) {
+  .container-hero img {
+    height: 60px;
   }
 
-  input[type="number"] {
-    width: 40px;
+  .container-features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
 
-  button {
-    font-size: 13px;
-    padding: 8px 12px;
+  #producto1 .pro {
+    width: 30%;
   }
 
-  td img {
-    width: 50px;
-    height: 50px;
+  .marcas {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 }
+
+/* Responsive para pantallas medianas (tabletas) */
+@media (max-width: 992px) {
+  .container-hero img {
+    height: 50px;
+  }
+
+  .container-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #producto1 .pro {
+    width: 45%;
+  }
+
+  .marcas {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Responsive para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  #producto1 .pro {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .marcas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Responsive para pantallas muy pequeñas (móviles en modo vertical) */
+@media (max-width: 576px) {
+  .container-hero {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container-hero img {
+    height: 40px;
+  }
+
+  #producto1 .pro {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .marcas {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .container-footer {
+    padding: 1rem;
+  }
+
+  .menu-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+}
+
 
 .banner {
   position: relative;
