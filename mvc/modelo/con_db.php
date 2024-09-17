@@ -1,7 +1,7 @@
 <?php
 // Archivo de conexión a la base de datos
-$servername = "u964289722_medicine_store";
-$username = "u964289722_medicine_store";
+$servername = "localhost";
+$username = "u964289722_root";
 $password = "Admin2024@";
 $database = "u964289722_medicine_store";
 
