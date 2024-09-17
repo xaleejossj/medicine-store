@@ -10,7 +10,7 @@
                 <ul>
                     <li id="home"><a href="../../mvc/index.php"><i class='bx bxs-home'></i></a></li>                    
                     <li><a href="#Categorias">Categorias</a></li>                    
-                    <li><a href="#Producto1">Productos</a></li>
+                    <li><a href="#producto1">Productos</a></li>
                     <li><a href="#Contactanos">Quienes somos</a></li>
                     <li><a href="#Contactanos">Contactanos</a></li>
                     <li><button><a href="vista/login.php">Acceder</a></button></li>                  
