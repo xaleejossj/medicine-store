@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nombre = $_POST['NOMBRE'];
         $descripcion = $_POST['DESCRIPCION'];
         $serial = $_POST['SERIAL'];
-        $cantidad = $_POST['CANTIDAD'];
-        $precio = $_POST['PRECIO'];
+        $cantidad = (int)$_POST['CANTIDAD'];
+        $precio = (float)$_POST['PRECIO'];
         $fecha = $_POST['FECHA_CADUCIDAD'];
         $estado = $_POST['ESTADO'];
         $categoria = $_POST['CATEGORIA'];
@@ -40,8 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = mysqli_stmt_execute($query_insert);
         } else {
             // Si hay ID, es una actualización
-            $query_update = mysqli_prepare($conexion, "UPDATE producto SET NOMBRE_PRODUCTO = ?, DESCRIPCION = ?, SERIAL = ?, CANTIDAD = ?, PRECIO = ?, FECHA_CADUCIDAD = ?, ESTADO = ?, ID_CATEGORIA = ?, IMAGEN = ? WHERE ID_PRODUCTO = ?");
-            mysqli_stmt_bind_param($query_update, 'ssisssissi', $nombre, $descripcion, $serial, $cantidad, $precio, $fecha, $estado, $categoria, $imagen, $id);
+            if ($imagen !== null) {
+                $query_update = mysqli_prepare($conexion, "UPDATE producto SET NOMBRE_PRODUCTO = ?, DESCRIPCION = ?, SERIAL = ?, CANTIDAD = ?, PRECIO = ?, FECHA_CADUCIDAD = ?, ESTADO = ?, ID_CATEGORIA = ?, IMAGEN = ? WHERE ID_PRODUCTO = ?");
+                mysqli_stmt_bind_param($query_update, 'ssisssissi', $nombre, $descripcion, $serial, $cantidad, $precio, $fecha, $estado, $categoria, $imagen, $id);
+            } else {
+                // Si no se sube una nueva imagen, actualizar sin modificar la imagen
+                $query_update = mysqli_prepare($conexion, "UPDATE producto SET NOMBRE_PRODUCTO = ?, DESCRIPCION = ?, SERIAL = ?, CANTIDAD = ?, PRECIO = ?, FECHA_CADUCIDAD = ?, ESTADO = ?, ID_CATEGORIA = ? WHERE ID_PRODUCTO = ?");
+                mysqli_stmt_bind_param($query_update, 'ssisssissi', $nombre, $descripcion, $serial, $cantidad, $precio, $fecha, $estado, $categoria, $id);
+            }
             $result = mysqli_stmt_execute($query_update);
         }
 
@@ -116,15 +122,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              ?>
            </select>
       </div>
-      
+      <style>
+        /* Estilo personalizado para el contenedor del archivo */
+.custom-file-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-file-input {
+    opacity: 0;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Estilo del botón "Seleccionar archivo" */
+.custom-file-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px 20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.custom-file-input:hover + .custom-file-label {
+    background-color: #0056b3;
+}
+
+/* Estilo para la imagen de previsualización */
+img {
+    margin-top: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ccc;
+}
+
+      </style>    
       <div class="form-group">
-           <label for="imagen">Imagen</label>
-           <input type="file" class="form-control" name="IMAGEN" id="IMAGEN">
-           <?php if (!empty($data_producto['IMAGEN'])): ?>
-               <br>
-               <img src="data:image/jpeg;base64,<?php echo base64_encode($data_producto['IMAGEN']); ?>" alt="Imagen del Producto" style="max-width: 200px; max-height: 200px;">
-           <?php endif; ?>
-      </div>
+    <label for="imagen">Imagen</label>
+    <div class="custom-file-container">
+        <label class="custom-file-label" for="IMAGEN">Seleccionar archivo</label>
+        <input type="file" class="form-control custom-file-input" name="IMAGEN" id="IMAGEN">
+    </div>
+        <?php if (!empty($data_producto['IMAGEN'])): ?>
+            <br>
+            <img src="data:image/jpeg;base64,<?php echo base64_encode($data_producto['IMAGEN']); ?>" alt="Imagen del Producto" style="max-width: 200px; max-height: 200px;">
+        <?php endif; ?>
+    </div>
+          <br>
+      
 
       <input type="submit" value="Guardar Producto" class="btn btn-primary">
     </form>
