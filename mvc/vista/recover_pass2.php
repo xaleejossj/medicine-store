@@ -34,10 +34,7 @@
                         <strong>¡Felicidades!</strong> Revise su correo para continuar.
                     </div>
                 <?php endif; ?>
-                
-                <div id="rc">
-                    <a href="login.php">Iniciar sesión</a>
-                </div>
+
             </form>
         </div>
     </div>
