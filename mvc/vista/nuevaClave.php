@@ -28,12 +28,11 @@ if (isset($_REQUEST['token']) && isset($_REQUEST['id'])) {
                 <label for="chk" aria-hidden="true" id="text">Ingrese su nueva Contraseña</label>
                 <input type="password" name="password" class="form-control" required>
 				<button type="submit"><a href="">Restablecer contraseña</a></button> 
-				<br>
 				<div id="rc">
                             <a href="login.php">Iniciar sesion</a>
                         </div>
 				<!-- Corregido: quitar el enlace -->
-				<br>
+
                 <?php if (isset($_REQUEST['success'])): ?>
 					<div class="alert alert-primary" role="alert">
                         <strong>¡Felicidades</strong>
