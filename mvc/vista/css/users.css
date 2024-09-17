@@ -1,0 +1,108 @@
+#layoutSidenav {
+    display: flex; 
+    min-height: 100vh; 
+  }
+  
+  #layoutSidenav_nav {
+    width: 250px; 
+    background-color: #003053; /
+  }
+  
+  .sb-sidenav {
+    height: 100%; 
+    color: white; 
+  }
+  
+  .sb-sidenav .nav-link {
+    color: white;
+  }
+  
+  #layoutSidenav_content {
+    flex-grow: 1; 
+    padding: 20px; 
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+    color: #fff; 
+    text-decoration: none; 
+    position: relative; 
+    margin-bottom: 15px;
+  }
+  
+  .nav-link i {
+    margin-right: 8px; 
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff; 
+    transition: width 0.3s;
+  }
+  
+  
+  .nav-link:hover::after {
+    width: 100%;
+  
+  }
+  
+  .nav-link:hover{
+    color: rgb(199, 199, 199);
+  }
+  /* Estilos de la paginación en formato horizontal con tonos más oscuros */
+.paginate_button {
+  display: inline-block;
+  margin: 0 5px; /* Espaciado entre los botones */
+}
+
+.paginate_button a {
+  color: #fff; /* Color de texto blanco */
+  background-color: #008B8B; /* Color turquesa oscuro */
+  padding: 10px 15px; /* Espaciado interior de los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Efecto suave en el hover */
+}
+
+.paginate_button a:hover {
+  background-color: #006666; /* Turquesa más oscuro al pasar el mouse */
+}
+
+.paginate_button.disabled a {
+  background-color: #4f9b9b; /* Color más claro para botones deshabilitados */
+  pointer-events: none; /* No permitir clic en botones deshabilitados */
+}
+
+.paginate_button.current a {
+  background-color: #006666; /* Color más oscuro para el botón de la página actual */
+  font-weight: bold;
+}
+
+/* Alinear la paginación horizontalmente en el centro */
+.dataTables_paginate {
+  text-align: center;
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Ajustar el tamaño del contenedor de paginación */
+.dataTables_paginate .paginate_button {
+  margin-left: 0;
+}
+
+a:visited{
+  color: #fff;
+}
+a:link{
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(199, 199, 199);
+}

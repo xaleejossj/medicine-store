@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Carrito */
+.carrito {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrito table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.carrito th,
+.carrito td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.carrito th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.carrito td img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.carrito input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.carrito .eliminar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carrito .eliminar:hover {
+  background-color: #ff1a1a;
+}
+
+.carrito button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carrito button:hover {
+  background-color: #45a049;
+}
+
+.carrito tfoot {
+  font-weight: bold;
+}
+
+.carrito tfoot td {
+  text-align: right;
+}
+
+/* Botón vaciar carrito */
+.carrito button:hover {
+  background-color: #ff1a1a;
+}

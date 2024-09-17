@@ -1,0 +1,742 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-hero {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container-hero img {
+  height: 80px;
+}
+
+.container-hero h1 {
+  text-decoration: none;
+  color: #003053;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.container-hero h1 a {
+  text-decoration: none;
+  color: #003053;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  position: absolute;
+  top: -15px;
+  text-align: center;
+}
+.banner img{
+  width: 100%;
+}
+header {
+  background-color: #003053;
+  display: grid;
+}
+
+i {
+  font-size: 20px;
+  color: white;
+
+  display: flex;
+}
+
+
+select {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #003053;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+input {
+  background-color: #d8dce5;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  align-content: center;
+
+  display: flex;
+  font-size: 17px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+}
+
+nav ul{
+  list-style: none;
+  overflow: hidden;
+}
+nav > li {
+  float:left;
+}
+ul, ol {
+  list-style:none;
+}
+nav ul li{
+  margin-top: 17px;
+  float:left;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 18px;
+}
+nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+nav ul li a{
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+nav li:hover > ul {
+  display:block;
+}
+
+nav li ul li {
+  position:relative;
+}
+
+nav li ul li ul {
+  float:unset;
+  top:0px;
+}
+nav ul li a:hover, a:focus {
+  color: white;
+  background-size: 100% 2px;
+}
+
+nav ul li button{
+  padding-top: -30px;
+  border-radius: 8px;
+  color: #003053;
+  border-color: white;
+  background-color:#003053;
+  margin-left: 470px;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+nav ul li button a{
+
+  background-color:#003053;
+  color:white;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #003053;
+  padding-top: 25px;
+}
+
+.inicio {
+  padding-top: 30px;
+}
+
+.icons {
+  padding: 1px;
+}
+
+.container-features {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: -50px;
+  padding: 10rem;
+  margin-bottom: -90px;
+}
+
+.card-feature {
+  align-items: center;
+  background: #7a96ab;
+  padding: 3rem;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.card-feature i {
+  font-size: 3rem;
+  color: #003053;
+  margin: -10px;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-content span {
+  font-size: 12px;
+  text-align: center;
+  color: #003053;
+  padding-top: 50px;
+}
+
+.icons {
+  margin-top: -120px;
+}
+
+
+/*Productos*/
+#producto1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#producto1 {
+  text-align: center;
+  padding: 30px;
+  margin-top: -35px;
+}
+
+#producto1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #003053;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+  background-color: #bbd2e3;
+}
+
+#producto1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#producto1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#producto1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+#producto1 .pro .des span {
+  color: #2d2dc3;
+  font-size: 12px;
+  font-size: 15px;
+}
+
+#producto1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 18px;
+}
+
+#producto1 .pro .des i {
+  font-size: 15px;
+  color: rgb(243, 181, 25);
+}
+
+#producto1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #003053;
+}
+
+#producto1 .i {
+  background-color: #003053;
+  border-radius: 15px;
+  height: 40px;
+  width: 70%;
+  color: white;
+  border: none;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/*Marca*/
+.marca {
+  background-color: #003053;
+  margin-top: -190px;
+}
+
+.barra {
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #003053;
+  margin-top: 20px;
+}
+
+.marcas {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 8rem;
+  padding: 8rem;
+
+}
+
+.laboratorio img {
+  align-items: center;
+  border-radius: 50%;
+  width: 60%;
+  height: 100%;
+  
+}
+
+#producto2 {
+  text-align: center;
+  padding: 60px;
+  margin-top: -150px;
+}
+
+/* Footer */
+/* El contenedor principal debe expandirse para ocupar el espacio restante */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El footer debe mantenerse pegado al fondo */
+.footer {
+  background-color: #003053;
+  margin-top: auto;
+  padding: 2rem;
+  color: white;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+}
+
+.menu-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 30rem;
+  gap: 3rem;
+  justify-items: center;
+}
+
+.title-footer {
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 50px;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.information ul li a,
+.my-account ul li a {
+  color: white;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.9rem;
+}
+
+.social-icons span {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons span i {
+  color: white;
+  font-size: 1.7rem;
+  margin-top: -0rem;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.whatsApp {
+  background-color: #44dc42;
+}
+
+.instagram {
+  background: linear-gradient(
+    #405de6,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #fcaf45
+  );
+}
+/* Contenedor principal del carrito */
+.carrito {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.carrito:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: auto; /* Asegura que el ancho de las columnas se ajuste automáticamente */
+}
+
+thead {
+  background: linear-gradient(to right, #4f9a94, #0e4d92);
+  color: white;
+}
+
+th,
+td {
+  padding: 15px 10px; /* Ajuste uniforme del padding */
+  font-size: 16px;
+  text-align: left; /* Alineación izquierda para todos los elementos de la tabla */
+  vertical-align: middle; /* Centrado vertical */
+}
+
+th {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Evita que los títulos se dividan en varias líneas */
+}
+
+td {
+  color: #333;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word; /* Permite que el contenido largo se ajuste */
+}
+
+/* Ajuste de ancho de columnas */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 30%; /* Nombre del producto */
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 15%; /* Imagen */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 10%; /* Cantidad */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 15%; /* Precio Unitario */
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  width: 15%; /* Subtotal */
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  width: 15%; /* Botón de acciones */
+}
+
+/* Estilo de las imágenes en la tabla */
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto; /* Centra la imagen dentro de la celda */
+}
+
+td img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para inputs de cantidad */
+input[type="number"] {
+  width: 50px;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 0 auto; /* Centra el input numérico */
+  display: block;
+}
+
+input[type="number"]:focus {
+  border-color: #0e4d92;
+  outline: none;
+}
+
+/* Botones */
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 auto; /* Centra los botones en la celda */
+  display: block;
+}
+
+/* Botón de vaciar carrito */
+button.vaciar-carrito {
+  background-color: #ff5757;
+  color: white;
+  margin-right: 10px;
+}
+
+button.vaciar-carrito:hover {
+  background-color: #ff2f2f;
+  transform: scale(1.05);
+}
+
+/* Botón de realizar compra */
+button.realizar-compra {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.realizar-compra:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Botón de eliminar producto */
+button.eliminar {
+  background-color: #ff7043;
+  color: white;
+  padding: 10px 15px;
+}
+
+button.eliminar:hover {
+  background-color: #ff5722;
+  transform: scale(1.05);
+}
+
+/* Fila del total */
+tfoot {
+  font-weight: bold;
+}
+
+tfoot td {
+  text-align: right;
+  font-size: 18px;
+}
+
+/* Animación sutil en hover */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividad: Ajustes de tabla en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  th,
+  td {
+    font-size: 14px;
+    text-align: left; /* Alineación a la izquierda en pantallas pequeñas */
+  }
+
+  input[type="number"] {
+    width: 40px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  td img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Ajusta la altura de la imagen */
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra completamente la sección sin deformarse */
+  object-position: center; /* Centra la imagen */
+}
+a:visited {
+  color: #fff; /* Cambia el color a púrpura para los enlaces visitados */
+}
+
+.main-nav ul li .dropdown-content {
+  display: none; /* Ocultar el submenú por defecto */
+  position: absolute; /* Posicionar el submenú relativo al elemento principal */
+  background-color: #04253d; /* Color de fondo del submenú */
+  min-width: 160px; /* Ancho mínimo del submenú */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del submenú */
+  z-index: 1; /* Asegurarse de que el submenú esté por encima de otros elementos */
+}
+
+.main-nav ul li:hover .dropdown-content {
+  display: block; /* Mostrar el submenú al pasar el ratón sobre el elemento principal */
+}
+
+.main-nav ul li .dropdown-content a {
+  padding: 12px 16px; /* Espaciado alrededor del texto en el submenú */
+  color: #fff; /* Color del texto en el submenú */
+  display: block;
+}
+
+.main-nav ul li .dropdown-content a:hover {
+  background-color: #04253d; /* Color de fondo al pasar el ratón en el submenú */
+}
+/* Estilos generales para la sección del usuario */
+#seccionUsuario {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#seccionUsuario h1 {
+  color: #003053;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.card h2 {
+  color: #003053;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+select, input[type="text"], input[type="email"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #003053;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #001c3d;
+}
