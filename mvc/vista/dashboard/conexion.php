@@ -1,6 +1,6 @@
 <?php
 
-    $host = "u964289722_medicine_store";
+    $host = "localhost";
     $user = "u964289722_root";
     $clave = "Admin2024@";
     $bd = "u964289722_medicine_store";
