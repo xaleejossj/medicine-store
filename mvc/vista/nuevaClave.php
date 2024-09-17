@@ -21,7 +21,7 @@ if (isset($_REQUEST['token']) && isset($_REQUEST['id'])) {
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 		<div class="signup">
-			<form action="updateClave.php" method="POST"> <!-- Corrección del método de envío -->
+			<form action="updateClave.php" method="POST"> <!-- Corrección del método de envio -->
 				<label for="chk" aria-hidden="true">Restablecer Contraseña</label>
 				<input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>"> <!-- Campo oculto para ID -->
 				<input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>"> <!-- Campo oculto para token -->
