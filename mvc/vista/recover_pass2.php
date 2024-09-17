@@ -35,7 +35,7 @@
 						 Revise su correo para continuar.
                     </div>
                 <?php endif; ?>
-
+		<a href="login.php">Volver a inicio de sesion</a>
             </form>
         </div>
     </div>
